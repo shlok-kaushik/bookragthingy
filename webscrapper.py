@@ -6,8 +6,6 @@ import cloudscraper
 import time
 import random
 import re
-
-
 def load_last_chapter(name):
     STATE_FILE= f"data/{name}.jsonl"
     if not os.path.exists(STATE_FILE):
@@ -64,5 +62,5 @@ def scrap_chapters(name):
 
 
 
-name = str(input("enter the novel to scrap"))
+name = str(input("enter the novel to scrap, use dashes '-' instead of space, ex - 'shadow-slave' : "))
 scrap_chapters(name)
